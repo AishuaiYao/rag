@@ -9,18 +9,30 @@ from unsloth import FastLanguageModel
 import torch
 import re
 
-
 # ----------------------
 # 1. 智能分块预处理
 # ----------------------
 class SmartDocumentProcessor:
     def __init__(self):
         # 初始化嵌入模型，使用HuggingFace的BAAI/bge-small-zh-v1.5模型-这个模型专为RAG而生
+
+        # 模型下载
+        # from modelscope import snapshot_download
+        # model_dir = snapshot_download('BAAI/bge-small-zh-v1.5')
+        # import os
+        # os.environ["HF_HOME"] = r"E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG"  # 这里是包含模型的目录路径
         self.embed_model = HuggingFaceEmbeddings(
-            model_name="BAAI/bge-small-zh-v1.5",
+            model_name="./BAAI/x",
             model_kwargs={"device": "cuda"},
             encode_kwargs={"batch_size": 16}
         )
+
+        # import torch
+        # from transformers import AutoModelForSequenceClassification, AutoTokenizer
+        #
+        # tokenizer = AutoTokenizer.from_pretrained('BAAI/bge-reranker-large')
+        # model = AutoModelForSequenceClassification.from_pretrained('BAAI/bge-reranker-large')
+        # model.eval()
 
     def _detect_content_type(self, text):
         """动态内容类型检测"""
@@ -36,7 +48,7 @@ class SmartDocumentProcessor:
         # 创建加载器列表，处理知识库中的PDF和文本文件
         loaders = [
             DirectoryLoader("./dataset", glob="**/*.pdf", loader_cls=PyPDFLoader),
-            DirectoryLoader("./dataset", glob="**/*.txt", loader_cls=TextLoader)
+            DirectoryLoader("./dataset", glob="**/*.txt", loader_cls=lambda x: TextLoader(x, encoding='utf-8'))
         ]
         # 初始化空列表，用于存储加载的所有文档
         documents = []

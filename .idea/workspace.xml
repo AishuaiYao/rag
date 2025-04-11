@@ -4,21 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb79f4f-5478-402d-a427-5e2c52af305b" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/RAG.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/command.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataset/cases.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataset/圣墟.txt" afterDir="false" />
+    <list default="true" id="bfb79f4f-5478-402d-a427-5e2c52af305b" name="更改" comment="#">
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/.mdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/.msc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/configuration.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/figures/benchmark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/generation_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/model.safetensors.index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/tokenizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/tokenizer_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_download.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requriments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/command.sh" beforeDir="false" afterPath="$PROJECT_DIR$/command.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,16 +52,74 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.model_download.executor": "Run",
+    "Python.process.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/3-软件/PyCharm Community Edition 2024.3.5/PythonProject/RAG"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\dataset" />
     </key>
+  </component>
+  <component name="RunManager" selected="Python.process">
+    <configuration name="model_download" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model_download.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="process" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/process.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.process" />
+        <item itemvalue="Python.model_download" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -64,6 +137,27 @@
       <option name="presentableId" value="Default" />
       <updated>1744352529289</updated>
     </task>
+    <task id="LOCAL-00001" summary="#">
+      <option name="closed" value="true" />
+      <created>1744355194368</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744355194368</updated>
+    </task>
+    <task id="LOCAL-00002" summary="#">
+      <option name="closed" value="true" />
+      <created>1744355567650</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744355567650</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#" />
+    <option name="LAST_COMMIT_MESSAGE" value="#" />
   </component>
 </project>
