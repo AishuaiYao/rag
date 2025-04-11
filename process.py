@@ -22,7 +22,7 @@ class SmartDocumentProcessor:
         # import os
         # os.environ["HF_HOME"] = r"E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG"  # 这里是包含模型的目录路径
         self.embed_model = HuggingFaceEmbeddings(
-            model_name="./BAAI/x",
+            model_name=r"E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\BAAI\x",
             model_kwargs={"device": "cuda"},
             encode_kwargs={"batch_size": 16}
         )
