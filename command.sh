@@ -1,7 +1,7 @@
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple chromadb==0.6.3 pypdf==5.3.0 unstructured[pdf]==0.16.23
 
 
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple rank_bm25
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pynvml
 
 
 
