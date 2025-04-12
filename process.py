@@ -15,12 +15,12 @@ from tqdm import tqdm
 # 1. 智能分块预处理
 # ----------------------
 class SmartDocumentProcessor:
-    def __init__(self):
-        # 初始化嵌入模型，使用HuggingFace的BAAI/bge-small-zh-v1.5模型-这个模型专为RAG而生
+    def __init__(self, file_name):
+        self.file_name = file_name
         print("正在初始化嵌入模型...")
         self.embed_model = HuggingFaceEmbeddings(
-            model_name=r"./BAAI/bge-small-zh-v1.5",
-            model_kwargs={"device": "cuda"},
+            model_name=r"models/BAAI/bge-small-zh-v1.5",
+            model_kwargs={"device": "cpu"},
             encode_kwargs={"batch_size": 16}
         )
         print("嵌入模型初始化完成。")
@@ -36,11 +36,10 @@ class SmartDocumentProcessor:
 
     def process_documents(self):
         print("开始加载文档...")
-        # 加载文档
         # 创建加载器列表，处理知识库中的PDF和文本文件
         loaders = [
             DirectoryLoader("./dataset", glob="**/*.pdf", loader_cls=PyPDFLoader),
-            DirectoryLoader("./dataset", glob="**/*.txt", loader_cls=lambda x: TextLoader(x, encoding='utf-8'))
+            DirectoryLoader("./dataset", glob=f"**/{self.file_name}", loader_cls=lambda x: TextLoader(x, encoding='utf-8'))
         ]
         # 初始化空列表，用于存储加载的所有文档
         documents = []
@@ -101,9 +100,10 @@ class SmartDocumentProcessor:
 # 2. 混合检索系统
 # ----------------------
 class HybridRetriever:
-    def __init__(self, chunks):
-        embedding = HuggingFaceEmbeddings(model_name="./BAAI/bge-large-zh-v1.5")
-        persist_directory = "./vector_db"
+    def __init__(self, file_name, chunks):
+        embedding = HuggingFaceEmbeddings(model_name="models/BAAI/bge-large-zh-v1.5")
+        persist_directory = "./vector_db/"+file_name.replace('.txt', '')
+        os.makedirs(persist_directory, exist_ok=True)
         if os.path.exists(persist_directory) and os.listdir(persist_directory):
             print("发现本地已存在向量数据库，正在加载...")
             self.vector_db = Chroma(persist_directory=persist_directory, embedding_function=embedding)
@@ -135,10 +135,10 @@ class HybridRetriever:
         print("混合检索器创建完成。")
 
         print("开始初始化重排序模型...")
-        # 初始化重排序模型，使用BAAI/bge-reranker-large
         self.reranker = CrossEncoder(
-            "BAAI/bge-reranker-large",
-            device="cuda" if torch.has_cuda else "cpu"
+            "models/BAAI/bge-reranker-large",
+            # device="cuda" if torch.has_cuda else "cpu"
+            device="cpu"
         )
         print("重排序模型初始化完成。")
 
@@ -164,35 +164,32 @@ class HybridRetriever:
 # 3. RAG系统集成
 # ----------------------
 class EnhancedRAG:
-    def __init__(self):
+    def __init__(self, file_name):
         print("开始进行文档处理...")
-        # 文档处理
-        processor = SmartDocumentProcessor()
+        processor = SmartDocumentProcessor(file_name)
         chunks = processor.process_documents()  # 整合检索和生成功能
         print("文档处理完成。")
 
         print("开始初始化混合检索器...")
         # 初始化混合检索器，使用处理后的分块
-        self.retriever = HybridRetriever(chunks)
+        self.retriever = HybridRetriever(file_name, chunks)
         print("混合检索器初始化完成。")
 
         print("开始加载微调后的语言模型...")
-        # 加载微调后的语言模型，用于生成回答
-
         device_map = {
             "model.embeddings": 0,
             "model.layers": 0,
             "model.norm": 0,
-            "lm_head": 0
+            "lm_head": 0,
+            "model.embed_tokens.weight":0
         }
         self.model, self.tokenizer = FastLanguageModel.from_pretrained(
-            "DeepSeek-R1-Distill-Qwen-1.5B",
+            "models/DeepSeek-R1-Distill-Qwen-7B",
             max_seq_length=4096,
             offload_buffers = True,
             # llm_int8_enable_fp32_cpu_offload = True,
             device_map = device_map
         )
-
         print("微调后的语言模型加载完成。")
 
         # 设置随机种子
@@ -208,15 +205,10 @@ class EnhancedRAG:
             for doc in contexts
         ])
         # 创建提示模板，要求基于上下文回答问题
-        return f"""你是一个专业助手，请严格根据以下带来源的上下文：
-        {context_str}
-
-        按步骤思考并回答：{question}
-        如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"""
+        return f">你是一个专业助手，请严格根据以下来源的上下文:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
 
     def ask(self, question):
         print("开始使用检索器获取与问题相关的上下文...")
-        # 使用检索器获取与问题相关的上下文
         contexts = self.retriever.retrieve(question)
         print("与问题相关的上下文获取完成。")
 
@@ -241,14 +233,24 @@ class EnhancedRAG:
         return response['choices'][0]['text']
 
 
-print("开始初始化RAG系统...")
-rag = EnhancedRAG()
-print("RAG系统初始化完成。")
+if __name__ == '__main__':
+    book_name = '巴伐利亚玫瑰.txt'
+    print("开始初始化RAG系统...")
+    rag = EnhancedRAG(book_name)
+    print("RAG系统初始化完成。")
 
-complex_question = "给我讲讲沙漠中的彼岸花"
-print(f"开始处理问题：{complex_question}")
-answer = rag.ask(complex_question)
-print("问题处理完成。")
-print(f"问题：{complex_question}")
-print("答案：")
-print(answer)
+    complex_question = "汉诺威柏林的高速公路上发生了什么"
+    print(f"开始处理问题：{complex_question}")
+    answer = rag.ask(complex_question)
+    print("问题处理完成。")
+    print(f"[问题：{complex_question}]")
+    print(">答案：")
+    print(answer)
+    print("问题2")
+    complex_question = "伊丽莎没穿越之前多大了，不是问伊丽莎白"
+    print(f"开始处理问题：{complex_question}")
+    answer = rag.ask(complex_question)
+    print("问题处理完成。")
+    print(f"[问题：{complex_question}]")
+    print(">答案：")
+    print(answer)
