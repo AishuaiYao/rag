@@ -239,14 +239,14 @@ if __name__ == '__main__':
     rag = EnhancedRAG(book_name)
     print("RAG系统初始化完成。")
 
-    complex_question = "汉诺威柏林的高速公路上发生了什么"
-    print(f"开始处理问题：{complex_question}")
-    answer = rag.ask(complex_question)
-    print("问题处理完成。")
-    print(f"[问题：{complex_question}]")
-    print(">答案：")
-    print(answer)
-    print("问题2")
+    # complex_question = "汉诺威柏林的高速公路上发生了什么"
+    # print(f"开始处理问题：{complex_question}")
+    # answer = rag.ask(complex_question)
+    # print("问题处理完成。")
+    # print(f"[问题：{complex_question}]")
+    # print(">答案：")
+    # print(answer)
+
     complex_question = "伊丽莎没穿越之前多大了，不是问伊丽莎白"
     print(f"开始处理问题：{complex_question}")
     answer = rag.ask(complex_question)
