@@ -7,6 +7,7 @@ from sentence_transformers import CrossEncoder
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from unsloth import FastLanguageModel
 import torch
+import os
 import re
 from tqdm import tqdm
 
@@ -101,15 +102,19 @@ class SmartDocumentProcessor:
 # ----------------------
 class HybridRetriever:
     def __init__(self, chunks):
-        print("开始创建向量数据库...")
         embedding = HuggingFaceEmbeddings(model_name="./BAAI/bge-large-zh-v1.5")
-        # 手动添加文档并展示进度条
-        vector_db = Chroma(persist_directory="./vector_db", embedding_function=embedding)
-        for chunk in tqdm(chunks, desc="向量数据库创建进度"):
-            vector_db.add_documents([chunk])
-        self.vector_db = vector_db
-        print("向量数据库创建完成。")
-
+        persist_directory = "./vector_db"
+        if os.path.exists(persist_directory) and os.listdir(persist_directory):
+            print("发现本地已存在向量数据库，正在加载...")
+            self.vector_db = Chroma(persist_directory=persist_directory, embedding_function=embedding)
+            print("本地向量数据库加载完成。")
+        else:
+            print("未发现本地向量数据库，开始创建...")
+            # 手动添加文档并展示进度条
+            self.vector_db = Chroma(persist_directory=persist_directory, embedding_function=embedding)
+            for chunk in tqdm(chunks, desc="向量数据库创建进度"):
+                self.vector_db.add_documents([chunk])
+            print("向量数据库创建完成。")
         print("开始创建BM25检索器...")
         # 创建BM25检索器，从文档块中初始化，初始检索数量为5
         self.bm25_retriever = BM25Retriever.from_documents(
@@ -175,7 +180,7 @@ class EnhancedRAG:
         # 加载微调后的语言模型，用于生成回答
         # 我使用DeepSeek-R1-Distill-Qwen-14B在知乎推理数据集上进行微调
         self.model, self.tokenizer = FastLanguageModel.from_pretrained(
-            "DeepSeek-R1-Distill-Qwen-7B",
+            "DeepSeek-R1-Distill-Qwen-1.5B",
             max_seq_length=4096
         )
         print("微调后的语言模型加载完成。")
