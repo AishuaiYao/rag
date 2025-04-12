@@ -178,11 +178,21 @@ class EnhancedRAG:
 
         print("开始加载微调后的语言模型...")
         # 加载微调后的语言模型，用于生成回答
-        # 我使用DeepSeek-R1-Distill-Qwen-14B在知乎推理数据集上进行微调
+
+        device_map = {
+            "model.embeddings": 0,
+            "model.layers": 0,
+            "model.norm": 0,
+            "lm_head": 0
+        }
         self.model, self.tokenizer = FastLanguageModel.from_pretrained(
             "DeepSeek-R1-Distill-Qwen-1.5B",
-            max_seq_length=4096
+            max_seq_length=4096,
+            offload_buffers = True,
+            # llm_int8_enable_fp32_cpu_offload = True,
+            device_map = device_map
         )
+
         print("微调后的语言模型加载完成。")
 
         # 设置随机种子
