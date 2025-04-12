@@ -183,14 +183,14 @@ class EnhancedRAG:
             "lm_head": 0,
             "model.embed_tokens.weight":0
         }
-        self.model, self.tokenizer = FastLanguageModel.from_pretrained(
-            "models/DeepSeek-R1-Distill-Qwen-7B",
-            max_seq_length=4096,
-            offload_buffers = True,
-            # llm_int8_enable_fp32_cpu_offload = True,
-            device_map = device_map
-        )
-        print("微调后的语言模型加载完成。")
+        # self.model, self.tokenizer = FastLanguageModel.from_pretrained(
+        #     "models/DeepSeek-R1-Distill-Qwen-7B",
+        #     max_seq_length=4096,
+        #     offload_buffers = True,
+        #     # llm_int8_enable_fp32_cpu_offload = True,
+        #     device_map = device_map
+        # )
+        # print("微调后的语言模型加载完成。")
 
         # 设置随机种子
         torch.manual_seed(666)
@@ -248,9 +248,8 @@ if __name__ == '__main__':
     # print(answer)
 
     complex_question = "伊丽莎没穿越之前多大了，不是问伊丽莎白"
-    print(f"开始处理问题：{complex_question}")
+    print(f">开始处理问题：{complex_question}")
     answer = rag.ask(complex_question)
     print("问题处理完成。")
-    print(f"[问题：{complex_question}]")
     print(">答案：")
     print(answer)
