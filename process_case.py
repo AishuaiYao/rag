@@ -183,8 +183,8 @@ class EnhancedRAG:
             "model.embed_tokens.weight":0
         }
         self.model, self.tokenizer = FastLanguageModel.from_pretrained(
-            "models/DeepSeek-R1-Distill-Qwen-1.5B",
-            # "models/DeepSeek-R1-Distill-Qwen-7B",
+            # "models/DeepSeek-R1-Distill-Qwen-1.5B",
+            "models/DeepSeek-R1-Distill-Qwen-7B",
             max_seq_length=4096,
             offload_buffers = True,
             # llm_int8_enable_fp32_cpu_offload = True,
@@ -205,8 +205,8 @@ class EnhancedRAG:
             for doc in contexts
         ])
         # 创建提示模板，要求基于上下文回答问题
-        # return f">你是一个case分析助手，请严格根据以下来源的case里给出的best和reason情况，判断问题里哪个path更好，并且输出形式与case里的形式一样，添加best和reason:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
-        return f">你是一个case分析助手，请严格根据以下来源的case里给出的best和reason情况，判断问题里哪个path更好:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
+        return f">你是一个case分析助手，请严格根据以下来源的case里给出的best和reason情况，判断问题里哪个path更好，并且输出形式与case里的形式一样，添加best和reason:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
+        # return f">你是一个case分析助手，请严格根据以下来源的case里给出的best和reason情况，判断问题里哪个path更好:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
 
     def ask(self, question):
         print("开始使用检索器获取与问题相关的上下文...")
