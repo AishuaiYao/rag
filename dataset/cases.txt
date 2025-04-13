@@ -1,0 +1,1 @@
+{"requestid": "3a1678f147924d13b3a5eac29c6ecd34", "path1": {"traceid": "0a3090c48b584f6caf816b4bd68a5a07", "length": 53, "turnleft": 4, "turnright": 4, "safescore": 4.3}, "path2": {"traceid": "ab9287a1b91344fb93b1142b374e9893", "length": 52, "turnleft": 4, "turnright": 4, "safescore": 4.5}, "best": "path2", "reason": "shorter and safe than path1"}

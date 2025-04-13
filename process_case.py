@@ -183,7 +183,8 @@ class EnhancedRAG:
             "model.embed_tokens.weight":0
         }
         self.model, self.tokenizer = FastLanguageModel.from_pretrained(
-            "models/DeepSeek-R1-Distill-Qwen-7B",
+            "models/DeepSeek-R1-Distill-Qwen-1.5B",
+            # "models/DeepSeek-R1-Distill-Qwen-7B",
             max_seq_length=4096,
             offload_buffers = True,
             # llm_int8_enable_fp32_cpu_offload = True,
@@ -204,7 +205,8 @@ class EnhancedRAG:
             for doc in contexts
         ])
         # 创建提示模板，要求基于上下文回答问题
-        return f">你是一个专业助手，请严格根据以下来源的上下文:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
+        # return f">你是一个case分析助手，请严格根据以下来源的case里给出的best和reason情况，判断问题里哪个path更好，并且输出形式与case里的形式一样，添加best和reason:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
+        return f">你是一个case分析助手，请严格根据以下来源的case里给出的best和reason情况，判断问题里哪个path更好:\n  {context_str} \n>按步骤思考并回答：{question}\n>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
 
     def ask(self, question):
         print("开始使用检索器获取与问题相关的上下文...")
@@ -233,52 +235,15 @@ class EnhancedRAG:
 
 
 if __name__ == '__main__':
-    book_name = '巴伐利亚玫瑰.txt'
+    book_name = 'cases.txt'
     print("开始初始化RAG系统...")
     rag = EnhancedRAG(book_name)
     print("RAG系统初始化完成。")
 
-    # complex_question = "汉诺威柏林的高速公路上发生了什么" # 车祸
-    # print(f"开始处理问题：{complex_question}")
-    # answer = rag.ask(complex_question)
-    # print("问题处理完成。")
-    # print(f"[问题：{complex_question}]")
-    # print(">答案：")
-    # print(answer)
-
-    # complex_question = "女主没穿越之前多大了" # 27
-    # print(f">开始处理问题：{complex_question}")
-    # answer = rag.ask(complex_question)
-    # print("问题处理完成。")
-    # print(">答案：")
-    # print(answer)
-    #
-    # complex_question = "伊丽莎白的母亲叫什么" # 卢德薇卡
-    # print(f">开始处理问题：{complex_question}")
-    # answer = rag.ask(complex_question)
-    # print("问题处理完成。")
-    # print(">答案：")
-    # print(answer)
-    #
-    # complex_question = "马克思公爵有几个私生女" # 2个 伊丽莎和海兰妮
-    # print(f">开始处理问题：{complex_question}")
-    # answer = rag.ask(complex_question)
-    # print("问题处理完成。")
-    # print(">答案：")
-    # print(answer)
-    #
-    # complex_question = "法国的外交大臣叫什么" # 瓦列夫斯基
-    # print(f">开始处理问题：{complex_question}")
-    # answer = rag.ask(complex_question)
-    # print("问题处理完成。")
-    # print(">答案：")
-    # print(answer)
-    #
-    #
-    #
-    # complex_question = "'弗兰茨约瑟夫'号有多少马力" # 140匹
-    # print(f">开始处理问题：{complex_question}")
-    # answer = rag.ask(complex_question)
-    # print("问题处理完成。")
-    # print(">答案：")
-    # print(answer)
+    complex_question = '{"requestid": "306a7b8e17b011f0b173e02be94eee68", "path1": {"traceid": "306a7b8f17b011f0b5d9e02be943ee63", "length": 589, "turnleft": 4, "turnright": 4, "safescore": 4.3}, "path2": {"traceid": "306a7b9017b011f0af97e02be943ee62", "length": 549, "turnleft": 4, "turnright": 4, "safescore": 4.9}}'
+    print(f"开始处理问题：{complex_question}")
+    answer = rag.ask(complex_question)
+    print("问题处理完成。")
+    print(f"[问题：{complex_question}]")
+    print(">答案：")
+    print(answer)

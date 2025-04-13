@@ -1,6 +1,5 @@
-
-"E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\Scripts\python.exe" "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py"
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:2: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
+"E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\Scripts\python.exe" "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py"
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:2: LangChainDeprecationWarning: Importing HuggingFaceEmbeddings from langchain.embeddings is deprecated. Please replace deprecated imports:
 
 >> from langchain.embeddings import HuggingFaceEmbeddings
 
@@ -9,7 +8,7 @@ with new imports of:
 >> from langchain_community.embeddings import HuggingFaceEmbeddings
 You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
   from langchain.embeddings import HuggingFaceEmbeddings
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:3: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:3: LangChainDeprecationWarning: Importing Chroma from langchain.vectorstores is deprecated. Please replace deprecated imports:
 
 >> from langchain.vectorstores import Chroma
 
@@ -18,7 +17,7 @@ with new imports of:
 >> from langchain_community.vectorstores import Chroma
 You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
   from langchain.vectorstores import Chroma
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:4: LangChainDeprecationWarning: Importing BM25Retriever from langchain.retrievers is deprecated. Please replace deprecated imports:
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:4: LangChainDeprecationWarning: Importing BM25Retriever from langchain.retrievers is deprecated. Please replace deprecated imports:
 
 >> from langchain.retrievers import BM25Retriever
 
@@ -27,7 +26,7 @@ with new imports of:
 >> from langchain_community.retrievers import BM25Retriever
 You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
   from langchain.retrievers import BM25Retriever, EnsembleRetriever
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:5: LangChainDeprecationWarning: Importing DirectoryLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:5: LangChainDeprecationWarning: Importing DirectoryLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
 
 >> from langchain.document_loaders import DirectoryLoader
 
@@ -35,8 +34,8 @@ with new imports of:
 
 >> from langchain_community.document_loaders import DirectoryLoader
 You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.document_loaders import DirectoryLoader,PyPDFLoader,TextLoader
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:5: LangChainDeprecationWarning: Importing PyPDFLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
+  from langchain.document_loaders import DirectoryLoader, PyPDFLoader, TextLoader
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:5: LangChainDeprecationWarning: Importing PyPDFLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
 
 >> from langchain.document_loaders import PyPDFLoader
 
@@ -44,8 +43,8 @@ with new imports of:
 
 >> from langchain_community.document_loaders import PyPDFLoader
 You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.document_loaders import DirectoryLoader,PyPDFLoader,TextLoader
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:5: LangChainDeprecationWarning: Importing TextLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
+  from langchain.document_loaders import DirectoryLoader, PyPDFLoader, TextLoader
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:5: LangChainDeprecationWarning: Importing TextLoader from langchain.document_loaders is deprecated. Please replace deprecated imports:
 
 >> from langchain.document_loaders import TextLoader
 
@@ -53,144 +52,195 @@ with new imports of:
 
 >> from langchain_community.document_loaders import TextLoader
 You can use the langchain cli to **automatically** upgrade many imports. Please see documentation here <https://python.langchain.com/docs/versions/v0_2/>
-  from langchain.document_loaders import DirectoryLoader,PyPDFLoader,TextLoader
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:8: UserWarning: WARNING: Unsloth should be imported before transformers, peft to ensure all optimizations are applied. Your code may run slower or encounter memory issues without these optimizations.
+  from langchain.document_loaders import DirectoryLoader, PyPDFLoader, TextLoader
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:8: UserWarning: WARNING: Unsloth should be imported before transformers, peft to ensure all optimizations are applied. Your code may run slower or encounter memory issues without these optimizations.
 
 Please restructure your imports with 'import unsloth' at the top of your file.
   from unsloth import FastLanguageModel
 🦥 Unsloth: Will patch your computer to enable 2x faster free finetuning.
 Unsloth: Failed to patch Gemma3ForConditionalGeneration.
 🦥 Unsloth Zoo will now patch everything to make training faster!
-E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py:24: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
+开始初始化RAG系统...
+开始进行文档处理...
+正在初始化嵌入模型...
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:21: LangChainDeprecationWarning: The class `HuggingFaceEmbeddings` was deprecated in LangChain 0.2.2 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-huggingface package and should be used instead. To use it run `pip install -U :class:`~langchain-huggingface` and import as `from :class:`~langchain_huggingface import HuggingFaceEmbeddings``.
   self.embed_model = HuggingFaceEmbeddings(
-No sentence-transformers model found with name BAAI/bge-large-zh-v1.5. Creating a new one with mean pooling.
+嵌入模型初始化完成。
+开始加载文档...
+文档加载完成。
+开始进行语义分块...
+语义分块完成。
+开始进行二次动态分块...
+二次动态分块完成。
+开始为每个块添加元数据...
+元数据添加完成。
+文档处理完成。
+开始初始化混合检索器...
+语义分块进度: 100%|██████████| 1/1 [00:00<?, ?it/s]
+发现本地已存在向量数据库，正在加载...
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:109: LangChainDeprecationWarning: The class `Chroma` was deprecated in LangChain 0.2.9 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-chroma package and should be used instead. To use it run `pip install -U :class:`~langchain-chroma` and import as `from :class:`~langchain_chroma import Chroma``.
+  self.vector_db = Chroma(persist_directory=persist_directory, embedding_function=embedding)
+本地向量数据库加载完成。
+开始创建BM25检索器...
+BM25检索器创建完成。
+开始创建混合检索器...
+混合检索器创建完成。
+开始初始化重排序模型...
+重排序模型初始化完成。
+混合检索器初始化完成。
+开始加载微调后的语言模型...
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\unsloth_zoo\gradient_checkpointing.py:330: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  GPU_BUFFERS = tuple([torch.empty(2*256*2048, dtype = dtype, device = f"cuda:{i}") for i in range(n_gpus)])
+==((====))==  Unsloth 2025.3.19: Fast Qwen2 patching. Transformers: 4.51.2.
+   \\   /|    NVIDIA GeForce GTX 1650. Num GPUs = 1. Max memory: 4.0 GB. Platform: Windows.
+O^O/ \_/ \    Torch: 2.6.0+cu124. CUDA: 7.5. CUDA Toolkit: 12.4. Triton: 3.2.0
+\        /    Bfloat16 = FALSE. FA [Xformers = 0.0.29.post3. FA2 = False]
+ "-____-"     Free license: http://github.com/unslothai/unsloth
+Unsloth: Fast downloading is enabled - ignore downloading bars which are red colored!
+Sliding Window Attention is enabled but not implemented for `eager`; unexpected results may be encountered.
+models/DeepSeek-R1-Distill-Qwen-1.5B does not have a padding token! Will use pad_token = <|vision_pad|>.
+E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process_case.py:147: LangChainDeprecationWarning: The method `BaseRetriever.get_relevant_documents` was deprecated in langchain-core 0.1.46 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  docs = self.ensemble_retriever.get_relevant_documents(query)
+微调后的语言模型加载完成。
+RAG系统初始化完成。
+开始处理问题：
+    {
+        "requestid": "306a7b8e-17b0-11f0-b173-e02be94eee68",
+        "path1": {
+            "traceid": "306a7b8f-17b0-11f0-b5d9-e02be943ee63",
+            "length": 589,
+            "turnleft": 4,
+            "turnright": 4,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "306a7b90-17b0-11f0-af97-e02be943ee62",
+            "length": 549,
+            "turnleft": 4,
+            "turnright": 4,
+            "safescore": 4.9
+        }
+    }
 
+开始使用检索器获取与问题相关的上下文...
+开始使用混合检索器获取相关文档...
+混合检索器获取相关文档完成。
+开始使用重排序模型进行重排序...
+重排序完成。
+与问题相关的上下文获取完成。
+开始根据问题和上下文生成提示...
+提示生成完成。
+开始使用语言模型生成回答...
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+语言模型回答生成完成。
+问题处理完成。
+[问题：
+    {
+        "requestid": "306a7b8e-17b0-11f0-b173-e02be94eee68",
+        "path1": {
+            "traceid": "306a7b8f-17b0-11f0-b5d9-e02be943ee63",
+            "length": 589,
+            "turnleft": 4,
+            "turnright": 4,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "306a7b90-17b0-11f0-af97-e02be943ee62",
+            "length": 549,
+            "turnleft": 4,
+            "turnright": 4,
+            "safescore": 4.9
+        }
+    }
+    ]
+>答案：
+>你是一个case分析助手，请严格根据以下来源的case里给出的best和reason情况，判断问题里那个path更好:
+  [来源：dataset\cases.txt，类型：normal]
+{
+    "requestid": "306a7b8e-17b0-11f0-b173-e02be943ee68",
+    "path1": {
+        "traceid": "306a7b8f-17b0-11f0-b5d9-e02be943ee68",
+        "length": 43,
+        "turnleft": 4,
+        "turnright": 4,
+        "safescore": 4.3
+    },
+    "path2": {
+        "traceid": "306a7b90-17b0-11f0-af97-e02be943ee68",
+        "length": 52,
+        "turnleft": 4,
+        "turnright": 4,
+        "safescore": 4.2
+    },
+    "best": "path1",
+    "reason": "shorter than path2 and safe than path2"
+}
 
+[来源：dataset\cases.txt，类型：normal]
+"route_length": 53,
+        "turnleft": 4,
+        "turnright": 4,
+        "safescore": 4.2
+    },
+    "path2": {
+        "traceid": "52847d0e-17af-11f0-8f6d-e02be943ee68",
+        "route_length": 53,
+        "turnleft": 4,
+        "turnright": 4,
+        "safescore": 4.2
+    }
+}
+{
+    "requestid": "52847d0f-17af-11f0-ab4c-e02be943ee68",
+    "path1": {
+        "traceid": "52847d10-17af-11f0-8978-e02be943ee68",
+        "route_length": 53,
+        "turnleft": 4,
+        "turnright": 4,
 
+[来源：dataset\cases.txt，类型：normal]
+"route_length": 53,
+        "turnleft": 4,
+        "turnright": 4,
+        "safescore": 4.2
+    },
+    "path2": {
+        "traceid": "52847d11-17af-11f0-95b6-e02be943ee68",
+        "route_length": 53,
+        "turnleft": 4,
+        "turnright": 4,
+        "safescore": 4.2
+    }
+}
+{
+    "requestid": "52847d12-17af-11f0-8858-e02be943ee68",
+    "path1": {
+        "traceid": "52847d13-17af-11f0-8c11-e02be943ee68",
+        "route_length": 53,
+        "turnleft": 4,
+        "turnright": 4,
+>按步骤思考并回答：
+    {
+        "requestid": "306a7b8e-17b0-11f0-b173-e02be94eee68",
+        "path1": {
+            "traceid": "306a7b8f-17b0-11f0-b5d9-e02be943ee63",
+            "length": 589,
+            "turnleft": 4,
+            "turnright": 4,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "306a7b90-17b0-11f0-af97-e02be943ee62",
+            "length": 549,
+            "turnleft": 4,
+            "turnright": 4,
+            "safescore": 4.9
+        }
+    }
 
+>如果上下文信息不足，请明确指出缺失的信息。最后用中文给出结构化答案。"
+</think>
 
+根据提供的上下文信息，路径1（"path1"）的长度为589，safescore为4.3，而路径2（"path2"）的长度为549，safescore为4.9。路径1更短，同时safescore也比路径2高，因此路径1更优。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Traceback (most recent call last):
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
-    sock = connection.create_connection(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
-    raise err
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
-    sock.connect(sa)
-TimeoutError: timed out
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
-    response = self._make_request(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
-    raise new_e
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
-    self._validate_conn(conn)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
-    conn.connect()
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connection.py", line 704, in connect
-    self.sock = sock = self._new_conn()
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connection.py", line 207, in _new_conn
-    raise ConnectTimeoutError(
-urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001F53CB13BB0>, 'Connection to huggingface.co timed out. (connect timeout=10)')
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\requests\adapters.py", line 667, in send
-    resp = conn.urlopen(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
-    retries = retries.increment(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
-    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /BAAI/bge-large-zh-v1.5/resolve/main/config.json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F53CB13BB0>, 'Connection to huggingface.co timed out. (connect timeout=10)'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\file_download.py", line 1484, in _get_metadata_or_catch_error
-    metadata = get_hf_file_metadata(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
-    return fn(*args, **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\file_download.py", line 1401, in get_hf_file_metadata
-    r = _request_wrapper(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\file_download.py", line 285, in _request_wrapper
-    response = _request_wrapper(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\file_download.py", line 308, in _request_wrapper
-    response = get_session().request(method=method, url=url, **params)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\requests\sessions.py", line 589, in request
-    resp = self.send(prep, **send_kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\requests\sessions.py", line 703, in send
-    r = adapter.send(request, **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
-    return super().send(request, *args, **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\requests\adapters.py", line 688, in send
-    raise ConnectTimeout(e, request=request)
-requests.exceptions.ConnectTimeout: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /BAAI/bge-large-zh-v1.5/resolve/main/config.json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001F53CB13BB0>, 'Connection to huggingface.co timed out. (connect timeout=10)'))"), '(Request ID: 7d3b2d61-c5f2-4aa0-a478-3f36b8d6c749)')
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\transformers\utils\hub.py", line 424, in cached_files
-    hf_hub_download(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
-    return fn(*args, **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\file_download.py", line 961, in hf_hub_download
-    return _hf_hub_download_to_cache_dir(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\file_download.py", line 1068, in _hf_hub_download_to_cache_dir
-    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\huggingface_hub\file_download.py", line 1599, in _raise_on_head_call_error
-    raise LocalEntryNotFoundError(
-huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py", line 205, in <module>
-    rag = EnhancedRAG()
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py", line 154, in __init__
-    self.retriever = HybridRetriever(chunks)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\process.py", line 105, in __init__
-    embedding=HuggingFaceEmbeddings(model_name="BAAI/bge-large-zh-v1.5"),
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\langchain_core\_api\deprecation.py", line 221, in warn_if_direct_instance
-    return wrapped(self, *args, **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\langchain_community\embeddings\huggingface.py", line 92, in __init__
-    self.client = sentence_transformers.SentenceTransformer(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\sentence_transformers\SentenceTransformer.py", line 320, in __init__
-    modules = self._load_auto_model(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\sentence_transformers\SentenceTransformer.py", line 1538, in _load_auto_model
-    transformer_model = Transformer(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\sentence_transformers\models\Transformer.py", line 80, in __init__
-    config, is_peft_model = self._load_config(model_name_or_path, cache_dir, backend, config_args)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\sentence_transformers\models\Transformer.py", line 145, in _load_config
-    return AutoConfig.from_pretrained(model_name_or_path, **config_args, cache_dir=cache_dir), False
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\transformers\models\auto\configuration_auto.py", line 1112, in from_pretrained
-    config_dict, unused_kwargs = PretrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\transformers\configuration_utils.py", line 590, in get_config_dict
-    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\transformers\configuration_utils.py", line 649, in _get_config_dict
-    resolved_config_file = cached_file(
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\transformers\utils\hub.py", line 266, in cached_file
-    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
-  File "E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\.venv\lib\site-packages\transformers\utils\hub.py", line 491, in cached_files
-    raise OSError(
-OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
-Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
-
-进程已结束，退出代码为 1
+进程已结束，退出代码为 0
