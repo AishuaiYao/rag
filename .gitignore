@@ -1,4 +1,4 @@
-models/
-unsloth_compiled_cache/
-vector_db/
+/models/
+/unsloth_compiled_cache/
+/vector_db/
 *.zip

@@ -9,12 +9,14 @@ for template in cases:
     template['requestid'] = str(uuid.uuid4()).replace('-', '')
     template['path1']['traceid'] = str(uuid.uuid4()).replace('-', '')
     template['path2']['traceid'] = str(uuid.uuid4()).replace('-', '')
-    print(json.dumps(template))
-    cases_txt.append(template)
+    ret = json.dumps(template)
+    print(ret)
+    cases_txt.append(ret)
 
-with open('dataset/cases.txt', 'r') as fw:
+with open('dataset/cases.txt', 'w') as fw:
     fw.writelines(cases_txt)
 
+print()
 data = {
     "requestid": "306a7b8e17b011f0b173e02be94eee68",
     "path1": {
