@@ -1,0 +1,4 @@
+models/
+unsloth_compiled_cache/
+vector_db/
+*.zip

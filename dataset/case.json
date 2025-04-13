@@ -1,0 +1,157 @@
+[
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2393.56,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2453.53,
+            "safescore": 4.9
+        },
+        "best": "path2",
+        "reason": "路线2比路线1长不超过200m，而且路线2比路线1的安全分高于0.5"
+    },
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2333.50,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2013.83,
+            "safescore": 4.9
+        },
+        "best": "path2",
+        "reason": "路线2比路线1短，而且路线2安全分更高"
+    },
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2333.50,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2413.83,
+            "safescore": 4.5
+        },
+        "best": "path1",
+        "reason": "虽然路线2比路线1长不超过200m,但是路线2比路线1的安全分没有大于0.5"
+    },
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2333.50,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2413.83,
+            "safescore": 4.3
+        },
+        "best": "path1",
+        "reason": "虽然路线2比路线1长不超过200m，但是路线2与路线1的安全分一致"
+    },
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2333.50,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2413.83,
+            "safescore": 4.1
+        },
+        "best": "path1",
+        "reason": "路线2比路线1长，而且路线2安全分更低"
+    },
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2333.50,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2713.83,
+            "safescore": 4.9
+        },
+        "best": "path1",
+        "reason": "路线2比路线1长超过200m，不论安全什么情况都是路线1更好"
+    },
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2333.50,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2713.83,
+            "safescore": 4.3
+        },
+        "best": "path1",
+        "reason": "路线2比路线1长超过200m，不论安全什么情况都是路线1更好"
+    },
+    {
+        "requestid": "9706fbf312fb4c53a51b7a3fcc5158b0",
+        "path1": {
+            "traceid": "bf70f1225dc246b6b184d3f40b55fe01",
+            "length": 2333.50,
+            "safescore": 4.3
+        },
+        "path2": {
+            "traceid": "37923f22f69f4a4ab7ac617d587eb624",
+            "length": 2713.83,
+            "safescore": 4.1
+        },
+        "best": "path1",
+        "reason": "路线2比路线1长超过200m，不论安全什么情况都是路线1更好"
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

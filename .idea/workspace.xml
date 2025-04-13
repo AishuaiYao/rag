@@ -4,24 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfb79f4f-5478-402d-a427-5e2c52af305b" name="更改" comment="#">
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/.mdl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/.msc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/configuration.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/figures/benchmark.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/generation_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/model.safetensors.index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/tokenizer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/tokenizer_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_download.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requriments.txt" afterDir="false" />
+    <list default="true" id="bfb79f4f-5478-402d-a427-5e2c52af305b" name="更改" comment="update">
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/.mdl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/.msc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/.mv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/configuration.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/figures/benchmark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/generation_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/model-00001-of-000002.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/model-00002-of-000002.safetensors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/model.safetensors.index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/tokenizer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/DeepSeek-R1-Distill-Qwen-7B/tokenizer_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/command.sh" beforeDir="false" afterPath="$PROJECT_DIR$/command.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/.mdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/.msc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/configuration.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/figures/benchmark.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/generation_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/model.safetensors.index.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/tokenizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeepSeek-R1-Distill-Qwen-7B/tokenizer_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/cases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/cases.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log" beforeDir="false" afterPath="$PROJECT_DIR$/log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +50,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2vZVLn0Sn6QAFHaI6xAVOYknxV0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,27 +61,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.model_download.executor": "Run",
-    "Python.process.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/3-软件/PyCharm Community Edition 2024.3.5/PythonProject/RAG"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.model_download.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_case.executor&quot;: &quot;Run&quot;,
+    &quot;Python.resource_info.executor&quot;: &quot;Run&quot;,
+    &quot;Python.temp (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/3-软件/PyCharm Community Edition 2024.3.5/PythonProject/RAG&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG" />
+      <recent name="E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\BAAI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\vector_db\圣墟" />
       <recent name="E:\3-软件\PyCharm Community Edition 2024.3.5\PythonProject\RAG\dataset" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.process">
+  <component name="RunManager" selected="Python.temp">
     <configuration name="model_download" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RAG" />
       <option name="ENV_FILES" value="" />
@@ -114,8 +134,84 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="process_case" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/process_case.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="resource_info" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resource_info.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RAG" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/temp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.process_case" />
+      <item itemvalue="Python.resource_info" />
+      <item itemvalue="Python.model_download" />
+      <item itemvalue="Python.process" />
+      <item itemvalue="Python.temp" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.process_case" />
+        <item itemvalue="Python.resource_info" />
         <item itemvalue="Python.process" />
         <item itemvalue="Python.model_download" />
       </list>
@@ -153,11 +249,139 @@
       <option name="project" value="LOCAL" />
       <updated>1744355567650</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="#">
+      <option name="closed" value="true" />
+      <created>1744362280254</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744362280254</updated>
+    </task>
+    <task id="LOCAL-00004" summary="#">
+      <option name="closed" value="true" />
+      <created>1744362586568</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744362586568</updated>
+    </task>
+    <task id="LOCAL-00005" summary="#">
+      <option name="closed" value="true" />
+      <created>1744380727482</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744380727483</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#">
+      <option name="closed" value="true" />
+      <created>1744440596500</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744440596500</updated>
+    </task>
+    <task id="LOCAL-00007" summary="#">
+      <option name="closed" value="true" />
+      <created>1744441725201</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744441725201</updated>
+    </task>
+    <task id="LOCAL-00008" summary="#">
+      <option name="closed" value="true" />
+      <created>1744443824791</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744443824791</updated>
+    </task>
+    <task id="LOCAL-00009" summary="##">
+      <option name="closed" value="true" />
+      <created>1744450864767</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744450864767</updated>
+    </task>
+    <task id="LOCAL-00010" summary="可运行7b模型">
+      <option name="closed" value="true" />
+      <created>1744452165222</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744452165222</updated>
+    </task>
+    <task id="LOCAL-00011" summary="可运行7b模型">
+      <option name="closed" value="true" />
+      <created>1744452365837</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1744452365837</updated>
+    </task>
+    <task id="LOCAL-00012" summary="可运行7b模型">
+      <option name="closed" value="true" />
+      <created>1744452378292</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744452378292</updated>
+    </task>
+    <task id="LOCAL-00013" summary="上传github">
+      <option name="closed" value="true" />
+      <created>1744534767067</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744534767067</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update">
+      <option name="closed" value="true" />
+      <created>1744534930861</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744534930861</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update">
+      <option name="closed" value="true" />
+      <created>1744535032950</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1744535032950</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="#" />
-    <option name="LAST_COMMIT_MESSAGE" value="#" />
+    <MESSAGE value="##" />
+    <MESSAGE value="可运行7b模型" />
+    <MESSAGE value="上传github" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/process.py</url>
+          <line>185</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/process.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/temp.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
